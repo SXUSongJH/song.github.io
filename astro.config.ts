@@ -6,7 +6,8 @@ import { remarkPlugins, rehypePlugins } from "./plugins";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://song.github.io",
+  site: "https://sxusongjh.github.io",
+  base: "/song.github.io",
   integrations: [solid(), unocss({ injectReset: true }), sitemap()],
   markdown: {
     remarkPlugins,
