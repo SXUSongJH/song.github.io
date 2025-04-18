@@ -1,8 +1,8 @@
 export const SITE = {
-  website: "https://zxh.me/",
-  title: "Xiaohan Zou",
-  desc: "PhD student at Penn State",
-  author: "Xiaohan Zou"
+  website: "https://sxusongjh.github.io/song.github.io/",
+  title: "Jiahao Song",
+  desc: "Keep your feet on the ground, and your eyes on the stars.",
+  author: "Jiahao Song"
 };
 
 export const THEME = {

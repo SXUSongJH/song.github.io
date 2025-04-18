@@ -1,16 +1,16 @@
 ---
-name: Xiaohan Zou
-subname: 邹笑寒
-avatarFront: /img/me.jpg
+name: Jiahao Song
+subname: 宋嘉豪
+avatarFront: /img/song.jpg
 avatarBack: /img/avatar.jpg
-tltr: I do machine learning by day and build things for the web by night.
+tltr: Keep your feet on the ground, and your eyes on the stars.
 socials:
   - icon: i-academicons:cv
     link: /files/cv/en.pdf
   - icon: "i-ion:mail-outline"
     link: "mailto:renovamenzxh@gmail.com"
   - icon: i-eva:github-outline
-    link: https://github.com/Renovamen
+    link: https://github.com/SXUSongJH
   - icon: i-radix-icons:linkedin-logo
     link: https://www.linkedin.com/in/xiaohan-zou
   - icon: i-academicons:google-scholar
