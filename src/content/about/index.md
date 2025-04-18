@@ -12,19 +12,17 @@ socials:
   - icon: i-eva:github-outline
     link: https://github.com/SXUSongJH
   - icon: i-radix-icons:linkedin-logo
-    link: https://www.linkedin.com/in/%E5%98%89%E8%B1%AA-%E5%AE%8B-533336282/
+    link: www.linkedin.com/in/嘉豪-宋-533336282
   - icon: i-academicons:google-scholar
     link: "#"
 ---
 
-
 ## Bio
 
-I am a Ph.D. student in the [Computer Science and Engineering](https://www.eecs.psu.edu/) department at [Pennsylvania State University](https://www.psu.edu/) advised by Prof. [George Kesidis](https://www.cse.psu.edu/~gik2/) and Prof. [Lu Lin](https://louise-lulin.github.io/). My current research focuses on trustworthiness and reliability in multimodal foundation models.
+I am a Master's student at the School of Mathematics and Statistics, [Shanxi University](https://www.sxu.edu.cn/). I hold a Bachelor's degree in International Business from [Zhongnan University of Economics and Law](https://wap.zuel.edu.cn/). My current research interests lie in Generative AI and Music Technology.
 
-Previously, I received my master's degree in [Computer Science](https://www.bu.edu/cs/) from [Boston University](https://www.bu.edu/) and my bachelor's degree in [Software Engineering](http://sse.tongji.edu.cn/) from [Tongji University](https://www.tongji.edu.cn/). I also interned at Kuaishou.
+In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a startup focused on intelligent job-seeking solutions. Feel free to check out our product: [SpeedyJob](https://test.speedyjob.cn/home).
 
-By the way, take a look at [some things](/projects) I've built as a web developer, featuring [ohmycv.app](https://ohmycv.app) - a sleek, in-browser, privacy-first Markdown resume builder.
 
 
 ## Selected Publications <span text-base>(see the <a href="/publications">full list</a> or <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
