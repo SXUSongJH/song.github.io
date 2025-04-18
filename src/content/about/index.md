@@ -2,29 +2,19 @@
 name: Jiahao Song
 subname: 宋嘉豪
 avatarFront: /img/song.jpg
-avatarBack: /img/avatar.jpg
-tltr: Keep your feet on the ground, and your eyes on the stars.
+avatarBack: /img/songAvatar.jpg
+tltr: Keep your feet on the ground, and your eyes on the stars. ———— 脚踏实地，仰望星空。
 socials:
   - icon: i-academicons:cv
-    link: /files/cv/en.pdf
+    link: /files/cv/cv_cn.pdf
   - icon: "i-ion:mail-outline"
-    link: "mailto:renovamenzxh@gmail.com"
+    link: "mailto:alphasong68@gmail.com, alfa_song6868@163.com"
   - icon: i-eva:github-outline
     link: https://github.com/SXUSongJH
   - icon: i-radix-icons:linkedin-logo
-    link: https://www.linkedin.com/in/xiaohan-zou
+    link: https://www.linkedin.com/in/%E5%98%89%E8%B1%AA-%E5%AE%8B-533336282/
   - icon: i-academicons:google-scholar
-    link: https://scholar.google.com/citations?user=RuW6xgMAAAAJ
-  - icon: i-carbon:logo-x
-    link: https://www.twitter.com/renovamen_zxh
-  - icon: i-ant-design:zhihu-outlined
-    link: https://www.zhihu.com/people/chao-neng-gui-su
-  - icon: i-ic:twotone-catching-pokemon
-    link: https://portfolio.zxh.me
-    name: Portfolio
-  - icon: i-mingcute:dashboard-4-line
-    link: https://dashboard.zxh.me
-    name: Dashboard
+    link: "#"
 ---
 
 
