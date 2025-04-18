@@ -3,7 +3,7 @@ name: Jiahao Song
 subname: 宋嘉豪
 avatarFront: /song.github.io/img/song.jpg
 avatarBack: /song.github.io/img/songAvatar.jpg
-tltr: Keep your feet on the ground, and your eyes on the stars. ———— 脚踏实地，仰望星空。
+tltr: Keep your feet on the ground, and your eyes on the stars.
 socials:
   - icon: i-academicons:cv
     link: /song.github.io/files/cv/cv_cn.pdf
@@ -12,7 +12,7 @@ socials:
   - icon: i-eva:github-outline
     link: https://github.com/SXUSongJH
   - icon: i-radix-icons:linkedin-logo
-    link: www.linkedin.com/in/嘉豪-宋-533336282
+    link: https://www.linkedin.com/in/%E5%98%89%E8%B1%AA-%E5%AE%8B-533336282/
   - icon: i-academicons:google-scholar
     link: "#"
 ---
