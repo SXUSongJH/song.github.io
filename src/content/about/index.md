@@ -57,7 +57,7 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 :::
 
 
-:::paper[/song.github.io/img/publications/costep.png]
+:::paper[/song.github.io/img/publications/musflow.pdf]
 **MusFlow: Multimodal Music Generation via Conditional Flow Matching**
 
 <u>Jiahao Song</u>, Yuzhao Wang
