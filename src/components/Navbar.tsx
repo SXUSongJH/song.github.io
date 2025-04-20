@@ -40,7 +40,7 @@ export const Navbar: Component<{
         !isFixed() && !isVisible() && "absolute top-0 left-0"
       }`}
     >
-      <a class="font-bold text-fg-light hover:text-fg-dark" href="/">
+      <a class="font-bold text-fg-light hover:text-fg-dark" href="/song.github.io/">
         <span text-lg>hi@sjh</span>
         <div class="prompt i-fa6-solid:angle-right inline-block" />
         <span class="blink">_</span>
@@ -49,7 +49,7 @@ export const Navbar: Component<{
       <nav hstack gap-x-4>
         <a
           class={`nav-item ${props.activePage === "publications" && "nav-active"}`}
-          href="/publications"
+          href="/song.github.io/publications"
           aria-label="Publications"
         >
           <div i-ph:rocket-launch-duotone class="md:hidden" />
@@ -58,7 +58,7 @@ export const Navbar: Component<{
 
         <a
           class={`nav-item ${props.activePage === "projects" && "nav-active"}`}
-          href="/projects"
+          href="/song.github.io/projects"
           aria-label="Projects"
         >
           <div i-ph:rocket-launch-duotone class="md:hidden" />
@@ -67,7 +67,7 @@ export const Navbar: Component<{
 
         <a
           class={`nav-item ${props.activePage === "posts" && "nav-active"}`}
-          href="/posts"
+          href="/song.github.io/posts"
           aria-label="Blog"
         >
           <div i-majesticons:pencil-line class="md:hidden" />
@@ -76,7 +76,7 @@ export const Navbar: Component<{
 
         <a
           class={`nav-item ${props.activePage === "search" && "nav-active"}`}
-          href="/search"
+          href="/song.github.io/search"
           aria-label="Search"
         >
           <span i-uil:search />
