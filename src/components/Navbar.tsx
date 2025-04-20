@@ -41,7 +41,7 @@ export const Navbar: Component<{
       }`}
     >
       <a class="font-bold text-fg-light hover:text-fg-dark" href="/">
-        <span text-lg>hi@zxh</span>
+        <span text-lg>hi@sjh</span>
         <div class="prompt i-fa6-solid:angle-right inline-block" />
         <span class="blink">_</span>
       </a>

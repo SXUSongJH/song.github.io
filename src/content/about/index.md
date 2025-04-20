@@ -27,7 +27,7 @@ In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a
 
 ## Selected Publications <span text-base>(see the <a href="/song.github.io/publications">full list</a> or <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
 
-:::paper[/img/publications/shiftdc.png]
+:::paper[/song.github.io/img/publications/shiftdc.png]
 **Understanding and Rectifying Safety Perception Distortion in VLMs**
 
 <u>Xiaohan Zou</u>, Jian Kang, George Kesidis, Lu Lin
@@ -58,8 +58,8 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 ## Talks
 
-- [Meta / Few-shot Learning](/song.github.io/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
-- [Continual Learning: Meta Continual Learning & Task Free Settings](/song.github.io/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020
+<!-- - [Meta / Few-shot Learning](/song.github.io/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
+- [Continual Learning: Meta Continual Learning & Task Free Settings](/song.github.io/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020 -->
 
 
 ## Miscellaneous
