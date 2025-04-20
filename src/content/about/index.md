@@ -45,7 +45,7 @@ In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a
 *Preprint*
 :::
 
-:::paper[/img/publications/rebq.png]
+:::paper[/song.github.io/img/publications/rebq.png]
 **Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration**
 
 Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
@@ -58,8 +58,8 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 ## Talks
 
-- [Meta / Few-shot Learning](/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
-- [Continual Learning: Meta Continual Learning & Task Free Settings](/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020
+- [Meta / Few-shot Learning](/song.github.io/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
+- [Continual Learning: Meta Continual Learning & Task Free Settings](/song.github.io/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020
 
 
 ## Miscellaneous
