@@ -52,7 +52,19 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 *Preprint*
 
+
 [arXiv:2403.11373](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
+:::
+
+
+:::paper[/song.github.io/img/publications/costep.png]
+**MusFlow: Multimodal Music Generation via Conditional Flow Matching**
+
+<u>Jiahao Song</u>, Yuzhao Wang
+
+*Preprint*
+
+[demo](https://anonymous22356.github.io/musflow.github.io)
 :::
 
 
@@ -64,14 +76,9 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 ## Miscellaneous
 
-- 🚀 This [personal website](https://github.com/Renovamen/renovamen.github.io) is built with [Astro](https://astro.build/), [Solid](https://www.solidjs.com/) and [UnoCSS](https://github.com/antfu/unocss)
+- 🚀 This [personal website](https://sxusongjh.github.io/song.github.io/) is built based on [Renovamen](https://github.com/Renovamen/renovamen.github.io), thanks to the excellent work.
 
-- 🧐 _Renovamen_ is a Latin word means _renewal_
-
-- 🖥 Ex-OIer/ACMer
-
-- 🥎 Used to be a member of the softball team of Tongji University
+- 🎃 My interests: music ♭, guitar 🎸, piano 🎹, photograph 📷, badminton 🏸.
 
 - 🌭 My dream: `while(sleeping){money++;}`
 
-- 🕹️ Currently interested in *No Man's Sky* and *Minecraft*
