@@ -25,7 +25,7 @@ In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a
 
 
 
-## Selected Publications <span text-base>(see the <a href="/publications">full list</a> or <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
+## Selected Publications <span text-base>(see the <a href="/song.github.io/publications">full list</a> or <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
 
 :::paper[/img/publications/shiftdc.png]
 **Understanding and Rectifying Safety Perception Distortion in VLMs**
@@ -37,7 +37,7 @@ In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a
 [arXiv:2502.13095](https://arxiv.org/abs/2502.13095)
 :::
 
-:::paper[/img/publications/costep.png]
+:::paper[/song.github.io/img/publications/costep.png]
 **Learning Conditional Space-Time Prompt Distributions for Video Class-Incremental Learning**
 
 <u>Xiaohan Zou</u>, Shu Zhao, Wenchao Ma, Huijuan Xu
