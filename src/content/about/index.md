@@ -73,6 +73,8 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 <!-- - [Meta / Few-shot Learning](/song.github.io/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
 - [Continual Learning: Meta Continual Learning & Task Free Settings](/song.github.io/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020 -->
 
+- [Score-Based Generative Model](/song.github.io/files/talks/2024-09-SGM.pdf), Shanxi University, 09/2024
+
 
 ## Miscellaneous
 
