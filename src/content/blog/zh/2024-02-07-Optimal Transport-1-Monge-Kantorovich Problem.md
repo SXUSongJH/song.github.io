@@ -87,11 +87,14 @@ A区域中有两个分子需要运输到B区域的指定位置，总共有两种
 
 &emsp;&emsp;我们来考虑一个实际问题，有 n 个生产木材的工厂，生产的木材需要供应给 m 个城市，每个工厂每个月的产能是固定的，记为 $\boldsymbol{a}, \boldsymbol{a} \in \mathbb{R}^{n}$；每个城市每个月木材的需求量也是固定的，记为 $\boldsymbol{b}, \boldsymbol{b} \in \mathbb{R}^{m}$。记 $\boldsymbol{P} = [p_{ij}]_{n \times m} \in \mathbb{R}^{n \times m}_{+}$ 表示运输方案，其中 $p_{ij}$ 表示第 i 个工厂运输到第 j 个城市的木材量。记 $\boldsymbol{C} = [c_{ij}]_{n \times m} \in \mathbb{R}^{n \times m}_{+}$ 表示运输成本，其中 $c_{ij}$ 表示将单位木材从第i个工厂运输到第j个城市的成本。记：  
 
-$$\boldsymbol{U}(\boldsymbol{a},\boldsymbol{b}) = \{ \boldsymbol{P} \in \mathbb{R}^{n \times m}_{+}: \boldsymbol{P} \mathbf{1}_{m}=\boldsymbol{a} \quad and \quad \boldsymbol{P^{T}} \mathbf{1}_{n}=\boldsymbol{b} \}$$  
+$$
+\boldsymbol{U}(\boldsymbol{a},\boldsymbol{b}) = \{ \boldsymbol{P} \in \mathbb{R}^{n \times m}_{+}: \boldsymbol{P} \mathbf{1}_{m}=\boldsymbol{a} \quad and \quad \boldsymbol{P^{T}} \mathbf{1}_{n}=\boldsymbol{b} \}
+$$  
 
 &emsp;&emsp;则最优传输问题可以被定义为：  
 
-$$L_{\boldsymbol{C}}(\boldsymbol{a}, \boldsymbol{b}) \quad \overset{\text{def.}}{=} \quad \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{a},\boldsymbol{b})} \left< \boldsymbol{C},\boldsymbol{P} \right>_{F}=\sum_{i,j}p_{ij}c_{ij}$$  
+$$
+L_{\boldsymbol{C}}(\boldsymbol{a}, \boldsymbol{b}) \quad \overset{\text{def.}}{=} \quad \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{a},\boldsymbol{b})} \left< \boldsymbol{C},\boldsymbol{P} \right>_{F}=\sum_{i,j}p_{ij}c_{ij}$$  
 
 $L_{\boldsymbol{C}}(\boldsymbol{a}, \boldsymbol{b})$即为最优运输方案。由于目标函数是线性函数，且 $\boldsymbol{U}(\boldsymbol{a},\boldsymbol{b})$ 为 $n+m$ 个等式定义的凸多胞体，故最优传输问题是一个典型的线性规划问题。  
 
@@ -103,11 +106,15 @@ $L_{\boldsymbol{C}}(\boldsymbol{a}, \boldsymbol{b})$即为最优运输方案。�
 
 &emsp;&emsp;设 $X, Y$ 是两个服从多项分布的随机变量，取值于 $\{ 1,2,\dotsb, d \}$。$X, Y$的概率分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 取自概率单纯形 $\sum_{d}:=\{ x \in \mathbb{R}^{d}_{+}: \boldsymbol{x^{T}}\mathbf{1}_{d}=1 \}$。运输矩阵 $\boldsymbol{P} \in \mathbb{R}^{d \times d}_{+}$。记:  
 
-$$\boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \{ \boldsymbol{P} \in \mathbb{R}^{d \times d}_{+} : \boldsymbol{P}\mathbf{1}_{d}=\boldsymbol{\alpha} \quad and \quad \boldsymbol{P^{T}}\mathbf{1}_d=\boldsymbol{\beta} \}$$  
+$$
+\boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \{ \boldsymbol{P} \in \mathbb{R}^{d \times d}_{+} : \boldsymbol{P}\mathbf{1}_{d}=\boldsymbol{\alpha} \quad and \quad \boldsymbol{P^{T}}\mathbf{1}_d=\boldsymbol{\beta} \}
+$$  
 
 从概率视角看，集合 $\boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})$ 包含了随机变量$X, Y$所有可能的联合分布$\pi(X,Y)$，即矩阵$\boldsymbol{P}=[p_{ij}]_{d \times d} = [\pi(x=i,y=j)]$。设成本矩阵为$\boldsymbol{C} \in \mathbb{R}^{d \times d}_{+}$。则多项分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 之间的最优传输问题可以被定义为：  
 
-$$L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> = \min_{(X,Y)} \{ \mathbb{E}_{(X,Y)}(c(X,Y)): X \sim \boldsymbol{\alpha}, Y \sim \boldsymbol{\beta} \}$$  
+$$
+L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> = \min_{(X,Y)} \{ \mathbb{E}_{(X,Y)}(c(X,Y)): X \sim \boldsymbol{\alpha}, Y \sim \boldsymbol{\beta} \}
+$$  
 
 $(X,Y)$表示取值于$\mathcal{X} \times \mathcal{Y}$的联合分布。  
 
@@ -115,7 +122,9 @@ $(X,Y)$表示取值于$\mathcal{X} \times \mathcal{Y}$的联合分布。
 
 &emsp;&emsp;连续分布的运输问题与离散问题相似，不同点在于随机变量 $X,Y$ 服从的是连续分布 $\boldsymbol{\alpha}, \boldsymbol{\beta}$，最优运输同样可以定义为：  
 
-$$L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{(X,Y)} \{ \mathbb{E}_{(X,Y)}(c(X,Y)): X \sim \boldsymbol{\alpha}, Y \sim \boldsymbol{\beta} \}$$  
+$$
+L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{(X,Y)} \{ \mathbb{E}_{(X,Y)}(c(X,Y)): X \sim \boldsymbol{\alpha}, Y \sim \boldsymbol{\beta} \}
+$$  
 
 ### 局部前向法  
 
