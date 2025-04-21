@@ -32,7 +32,7 @@ $$
 $$  
 
 &emsp;&emsp;现如今很多生成模型的学习策略便采用了最大似然法，例如高斯混合模型(GMM)、变分自编码(VAE)、扩散模型(Diffusion Model)。  
-&emsp;&emsp; (1) 式的优化并不是一项简单的工作，在 GMM 中，由于模型较为简单，我们可以采用 EM 算法进行求解，而在 VAE、Diffusion Model 中，我们则是对似然函数 $\log{p(x)}$ 的证据下界(Evidence Lower Bound) 进行优化。然而在 2014 年，lan.Goodfellow 提出了一种完全不同的学习策略，可以绕过求解最大似然这个棘手的问题，这便是基于对抗思想的生成对抗网络(GAN)，对于 GAN 的主要思想，可以阅读笔者之前的一篇博客文章[《生成对抗网络GANs——深度学习二十年间最酷的idea!》](https://sxusongjh.github.io/2023/11/06/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-2-Paper-%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97%E7%BD%91%E7%BB%9CGANs%E2%80%94%E2%80%94%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%8D%81%E5%B9%B4%E9%97%B4%E6%9C%80%E9%85%B7%E7%9A%84idea/)，在这篇博客中我介绍了 GAN 的原始论文，感兴趣的读者可以自行阅读。  
+&emsp;&emsp; (1) 式的优化并不是一项简单的工作，在 GMM 中，由于模型较为简单，我们可以采用 EM 算法进行求解，而在 VAE、Diffusion Model 中，我们则是对似然函数 $\log{p(x)}$ 的证据下界(Evidence Lower Bound) 进行优化。然而在 2014 年，lan.Goodfellow 提出了一种完全不同的学习策略，可以绕过求解最大似然这个棘手的问题，这便是基于对抗思想的生成对抗网络(GAN)，对于 GAN 的主要思想，可以阅读笔者之前的一篇博客文章[《Generative Adversarial Network (GAN)》](https://sxusongjh.github.io/song.github.io/posts/zh/2024-05-18-generative-model-introduction/)，在这篇博客中我介绍了 GAN 的原始论文，感兴趣的读者可以自行阅读。  
 &emsp;&emsp;由于本系列博客的初衷是介绍扩散模型，为了视角的统一，笔者会主要介绍几类基于最大似然的生成模型，包括GMM、VAE、Diffusion Model、Score-based Model。  
 
 ## Conference  
