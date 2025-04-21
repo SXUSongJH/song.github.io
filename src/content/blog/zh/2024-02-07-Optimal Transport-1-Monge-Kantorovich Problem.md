@@ -94,7 +94,8 @@ $$
 &emsp;&emsp;则最优传输问题可以被定义为：  
 
 $$
-L_{\boldsymbol{C}}(\boldsymbol{a}, \boldsymbol{b}) \quad \overset{\text{def.}}{=} \quad \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{a},\boldsymbol{b})} \left< \boldsymbol{C},\boldsymbol{P} \right>_{F}=\sum_{i,j}p_{ij}c_{ij}$$  
+L_{\boldsymbol{C}}(\boldsymbol{a}, \boldsymbol{b}) \quad \overset{\text{def.}}{=} \quad \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{a},\boldsymbol{b})} \left< \boldsymbol{C},\boldsymbol{P} \right>_{F}=\sum_{i,j}p_{ij}c_{ij}
+$$  
 
 $L_{\boldsymbol{C}}(\boldsymbol{a}, \boldsymbol{b})$即为最优运输方案。由于目标函数是线性函数，且 $\boldsymbol{U}(\boldsymbol{a},\boldsymbol{b})$ 为 $n+m$ 个等式定义的凸多胞体，故最优传输问题是一个典型的线性规划问题。  
 
