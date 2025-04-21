@@ -1,22 +1,20 @@
-Please also check my [Google Scholar](https://scholar.google.com/citations?user=RuW6xgMAAAAJ).
+Please also check my [Google Scholar]().
 
-## Machine Learning
+## Generative AI
 
 <div -mt-4 />
 
-### Preprints
+:::paper[/song.github.io/img/publications/musflow.png]
+**MusFlow: Multimodal Music Generation via Conditional Flow Matching**
 
-:::paper[/img/publications/shiftdc.png]
-**Understanding and Rectifying Safety Perception Distortion in VLMs**
-
-<u>Xiaohan Zou</u>, Jian Kang, George Kesidis, Lu Lin
+<u>Jiahao Song</u>, Yuzhao Wang
 
 *Preprint*
 
-[arXiv:2502.13095](https://arxiv.org/abs/2502.13095)
+[arXiv:2504.13535](https://arxiv.org/abs/2504.13535) / [demo](https://anonymous22356.github.io/musflow.github.io)
 :::
 
-:::paper[/img/publications/costep.png]
+<!-- :::paper[/img/publications/costep.png]
 **Learning Conditional Space-Time Prompt Distributions for Video Class-Incremental Learning**
 
 <u>Xiaohan Zou</u>, Shu Zhao, Wenchao Ma, Huijuan Xu
@@ -94,4 +92,4 @@ International Conference on Control Engineering and Artificial Intelligence (CCE
 
   Feiwen Xiao, Zhaohui Li, Jiaju Lin, <u>Xiaohan Zou</u>, Dandan Yang, Wenting Zou, Jinjun Xiong
 
-  *In Submission*
+  *In Submission* -->
