@@ -5,7 +5,7 @@ tags:
     - Generative Model
 ---  
 
-# 变分扩散模型(VDM)  
+## toc
 
 &emsp;&emsp;在上一节关于变分自编码的介绍中，我们已经讨论到了具有多层隐变量以及马尔可夫性质的变分自编码模型(MHVAE)，其基本形式与我们今天要介绍的变分扩散模型(Variational Diffusion Models)已经非常相似，在 MHVAE 的基础上， VDM的主要改进有三个方面：  
 
