@@ -23,7 +23,7 @@ const { post, lang } = Astro.props;
 const { title, author, tags } = post.data;
 
 const { Content } = await render(post);
-const tagURL = `/posts/${lang === "en" ? "" : lang + "/"}tags/`;
+const tagURL = `/song.github.io/posts/${lang === "en" ? "" : lang + "/"}tags/`;
 
 // does this post has table of contents enabled?
 const hasToc = /## toc\n/.test(post.body ?? "");
@@ -114,14 +114,14 @@ const lastUpdatedText = THEME.lastUpdatedText;
       <div class="flex justify-between mt-3 pt-3 text-[0.95em] border-t">
         <span>
           {prevPost && (
-            <a href={`/posts/${prevPost.path}`} class="!text-fg before:content-['←']">
+            <a href={`/song.github.io/posts/${prevPost.path}`} class="!text-fg before:content-['←']">
               {prevPost.title}
             </a>
           )}
         </span>
         <span text-right>
           {nextPost && (
-            <a href={`/posts/${nextPost.path}`} class="!text-fg after:content-['→']">
+            <a href={`/song.github.io/posts/${nextPost.path}`} class="!text-fg after:content-['→']">
               {nextPost.title}
             </a>
           )}
