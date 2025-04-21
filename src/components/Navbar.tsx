@@ -67,7 +67,7 @@ export const Navbar: Component<{
 
         <a
           class={`nav-item ${props.activePage === "posts" && "nav-active"}`}
-          href="/song.github.io/posts/zh"
+          href="/song.github.io/posts"
           aria-label="Blog"
         >
           <div i-majesticons:pencil-line class="md:hidden" />
