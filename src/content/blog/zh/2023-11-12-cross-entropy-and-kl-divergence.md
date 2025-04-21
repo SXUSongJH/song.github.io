@@ -41,8 +41,8 @@ $$
 &emsp;&emsp;若随机变量$X$为连续型随机变量，则熵可以写为积分形式：  
 
 $$
-H(X)=\int_{\mathcal{X}}P(x)I(x)dx=-\int_{\mathcal{X}}P(x)\log{P(x)}
-dx$$  
+H(X)=\int_{\mathcal{X}}P(x)I(x)dx=-\int_{\mathcal{X}}P(x)\log{P(x)}dx
+$$  
 
 ### 联合熵  
 
