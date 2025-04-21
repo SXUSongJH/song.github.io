@@ -105,6 +105,12 @@ projects:
         - i-logos:pytorch-icon
         - i-logos:matplotlib-icon
       repo: SXUSongJH/Diffusion_anime_faces_generation
+  
+  Product:
+    - name: SpeedyJob
+      link: https://test.speedyjob.cn/home
+      desc: A web-based job search platform based on artificial intelligence technology.
+      icon: i-ic:twotone-laptop-mac
     # - name: Flint
     #   link: https://github.com/Renovamen/flint
     #   desc: A toy deep learning framework implemented in Numpy from scratch
