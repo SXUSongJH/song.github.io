@@ -27,34 +27,6 @@ In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a
 
 ## Selected Publications <span text-base>(see the <a href="/song.github.io/publications">full list</a> or <a href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>)</span>
 
-<!-- :::paper[/song.github.io/img/publications/shiftdc.png]
-**Understanding and Rectifying Safety Perception Distortion in VLMs**
-
-<u>Xiaohan Zou</u>, Jian Kang, George Kesidis, Lu Lin
-
-*Preprint*
-
-[arXiv:2502.13095](https://arxiv.org/abs/2502.13095)
-:::
-
-:::paper[/song.github.io/img/publications/costep.png]
-**Learning Conditional Space-Time Prompt Distributions for Video Class-Incremental Learning**
-
-<u>Xiaohan Zou</u>, Shu Zhao, Wenchao Ma, Huijuan Xu
-
-*Preprint*
-:::
-
-:::paper[/song.github.io/img/publications/rebq.png]
-**Reconstruct before Query: Continual Missing Modality Learning with Decomposed Prompt Collaboration**
-
-Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
-
-*Preprint*
-
-
-[arXiv:2403.11373](https://arxiv.org/abs/2403.11373) / [code](https://github.com/Tree-Shu-Zhao/RebQ.pytorch)
-::: -->
 
 
 :::paper[/song.github.io/img/publications/musflow.png]
@@ -70,8 +42,7 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 ## Talks
 
-<!-- - [Meta / Few-shot Learning](/song.github.io/files/talks/2021-08-meta-learning.pdf), Kuaishou, 08/2021
-- [Continual Learning: Meta Continual Learning & Task Free Settings](/song.github.io/files/talks/2020-08-continual-learning.pdf), Peking University, 08/2020 -->
+
 
 - [Score-Based Generative Model](/song.github.io/files/talks/2024-09-SGM.pdf), Shanxi University, 09/2024
 
