@@ -7,6 +7,8 @@ tags:
 
 # Entropy Regularization  
 
+## toc
+
 &emsp;&emsp;在之前的文章中，我们从概率视角描述了最优传输问题。设 $X,Y$ 是服从分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 的两个随机变量，运输矩阵为 $\boldsymbol{P}$，成本矩阵为 $\boldsymbol{C}$，则分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 之间的最优传输问题可以被定义为(1)式：  
 
 $$

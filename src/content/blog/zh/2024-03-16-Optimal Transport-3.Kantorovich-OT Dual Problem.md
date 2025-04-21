@@ -7,6 +7,8 @@ tags:
 
 # Kantorovich-OT Dual Problem 
 
+## toc
+
 &emsp;&emsp;在前面的小节，我们介绍了 Kantorovich OT问题的基本形式，其基本形式如下：
 
 $$

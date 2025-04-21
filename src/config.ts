@@ -8,7 +8,7 @@ export const SITE = {
 export const THEME = {
   editLink: {
     pattern:
-      "https://github.com/Renovamen/renovamen.github.io/edit/main/src/content/blog:path",
+      "https://github.com/sxusongjh/song.github.io/edit/main/src/content/blog:path",
     text: "Edit this page on GitHub"
   },
   lastUpdatedText: "Last updated: "
