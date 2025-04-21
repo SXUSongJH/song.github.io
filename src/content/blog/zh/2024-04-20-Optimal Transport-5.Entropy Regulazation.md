@@ -9,24 +9,32 @@ tags:
 
 &emsp;&emsp;在之前的文章中，我们从概率视角描述了最优传输问题。设 $X,Y$ 是服从分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 的两个随机变量，运输矩阵为 $\boldsymbol{P}$，成本矩阵为 $\boldsymbol{C}$，则分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 之间的最优传输问题可以被定义为(1)式：  
 
-$$\begin{equation}
+$$
+\begin{equation}
     L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> = \min_{(X,Y)} \{ \mathbb{E}_{(X,Y)}(c(X,Y)): X \sim \boldsymbol{\alpha}, Y \sim \boldsymbol{\beta} \}
-\end{equation}$$  
+\end{equation}
+$$  
 
 &emsp;&emsp;我们在之前讨论过，运输矩阵 $\boldsymbol{P}$ 可以看作随机变量 $X,Y$ 的联合分布。从Monge的前向运输法到Kantorovich的局部前向运输，最优传输问题的解通常是满足边界条件下，"耦合度"最低的运输方式，即最优运输矩阵$\boldsymbol{P}$ 是一个很稀疏的矩阵，其非零元素主要集中在对角线附近。如果我们用概率论与信息论的视角来分析，这意味原始最优传输问题的解是**满足边际分布条件下，熵最小的联合分布。**  
 &emsp;&emsp;熵正则的主要思想对联合分布$\boldsymbol{P}$的信息熵进行惩罚，以期望求得的联合分布$\boldsymbol{P^{*}}$的熵更大。熵正则的数学表达式如下(2)式：  
 
-$$\begin{equation}
+$$
+\begin{equation}
     L_{\boldsymbol{C}}^{\varepsilon}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> - \varepsilon H(\boldsymbol{P})
-\end{equation}$$  
+\end{equation}
+$$  
 
 &emsp;&emsp;其中，常数 $\varepsilon$ 为惩罚系数，用于控制对联合分布的熵的惩罚力度，$\varepsilon$ 越大，则我们解得的联合分布 $\boldsymbol{P^{*}}$ 的熵越大。除了这种形式，有一些文献也将熵正则的定义为如下形式(3)式：  
 
-$$\begin{equation}
+$$
+\begin{equation}
     L_{\boldsymbol{C}}^{\gamma}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbol{P} \in \boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right>
-\end{equation}$$  
+\end{equation}
+$$  
 
-$$\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | KL(\boldsymbol{P} || \boldsymbol{\alpha \beta^{T}}) \leq \gamma \} = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | h(\boldsymbol{P}) \ge h(\boldsymbol{\alpha}) + h(\boldsymbol{\beta}) - \gamma  \} \subset \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})$$  
+$$
+\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | KL(\boldsymbol{P} || \boldsymbol{\alpha \beta^{T}}) \leq \gamma \} = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | h(\boldsymbol{P}) \ge h(\boldsymbol{\alpha}) + h(\boldsymbol{\beta}) - \gamma  \} \subset \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})
+$$  
 
 &emsp;&emsp;(2)和(3)两种熵正则的形式实际上是等价的，熵正则在最优传输理论中起着十分重要的作用，**在本节我们将会讨论熵正则的作用；信息论以及几何视角下的熵正则内涵，以及证明其求解结果能够作为分布之间距离的度量。**  
 
@@ -48,35 +56,49 @@ $$\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymb
 &emsp;&emsp;假设现在有一条“又长又细的水管”，我们可以将这个水管看作实数轴，我们在这个实数轴的原点$O$处滴入一滴粒子数量为$C$的墨水，设 $\tau$ 代表扩散过程的时间间隔，$\rho(y)$ 表示在时间$\tau$内粒子移动距离为$y$的概率分布，其是一个概率密度函数。$f(x,t)$ 表示$t$时刻在实数轴$x$处的粒子的数量，其也是一个概率密度函数，同时是关于时间$t$的一个随机过程。  
   &emsp;&emsp;假设扩散过程是对称的，即$\rho(y)$和$f(x,t)$均为关于原点$O$的对称分布，此时有:  
 
-$$\rho(y) = \rho(-y) \Leftrightarrow \int_{-\infty}^{+\infty}y\rho(y)=0$$  
+$$
+\rho(y) = \rho(-y) \Leftrightarrow \int_{-\infty}^{+\infty}y\rho(y)=0
+$$  
 
 &emsp;&emsp;由假设我们可以得知这个系统的初始状态 $f(0,0) = C$，即墨水集中在原点处，扩散过程还没有发生，**此时我们可以将这种初始状态看作一个狄拉克$\delta$分布，这种分布是熵最小的分布，其熵实际上为零，系统不具有随机性。** 我们要来推导$f(x,t)$的表达式，由粒子质量守恒定律可以得到方程：  
 
-$$f(x,t+\tau) = \int_{-\infty}^{+\infty}f(x-y,t)\rho(y)dy$$  
+$$
+f(x,t+\tau) = \int_{-\infty}^{+\infty}f(x-y,t)\rho(y)dy
+$$  
 
 &emsp;&emsp;另外，如果我们把$f(x,t)$看作关于$t$的一元函数，我们可以将$f(x,t+\tau)$在$t$处进行泰勒展开：  
 
-$$f(x,t+\tau) = f(x,t)+\frac{\partial f}{\partial t}\tau+O(\tau)$$  
+$$
+f(x,t+\tau) = f(x,t)+\frac{\partial f}{\partial t}\tau+O(\tau)
+$$  
 
 &emsp;&emsp;同理，我们可以把$f(x-y,t)$在$x$处展开：  
 
-$$f(x-y,t)=f(x,t) - \frac{\partial f}{\partial x}y + \frac{1}{2} \frac{\partial^{2}f}{\partial x^{2}}y^{2}+O(y^{2})$$  
+$$
+f(x-y,t)=f(x,t) - \frac{\partial f}{\partial x}y + \frac{1}{2} \frac{\partial^{2}f}{\partial x^{2}}y^{2}+O(y^{2})
+$$  
 
 &emsp;&emsp;联立以上三个等式得到扩散过程的SDE：  
 
-$$f(x,t)+\frac{\partial f}{\partial t}\tau = \int_{-\infty}^{+\infty} \left[ f(x,t) - \frac{\partial f}{\partial x}y + \frac{1}{2} \frac{\partial^{2}f}{\partial x^{2}}y^{2} \right] \rho(y)dy$$  
+$$
+f(x,t)+\frac{\partial f}{\partial t}\tau = \int_{-\infty}^{+\infty} \left[ f(x,t) - \frac{\partial f}{\partial x}y + \frac{1}{2} \frac{\partial^{2}f}{\partial x^{2}}y^{2} \right] \rho(y)dy
+$$  
 
 &emsp;&emsp;通过化简，我们得到了最终的**扩散方程(4):**  
 
-$$\begin{equation}
+$$
+\begin{equation}
     \frac{\partial f}{\partial t} = \frac{D}{2\tau} \frac{\partial^{2}f}{\partial x^{2}}
-\end{equation}$$  
+\end{equation}
+$$  
 
 &emsp;&emsp;求解这个偏微分方程，我们发现**随机过程$f(x,t)$是一个高斯过程(5):**  
 
-$$\begin{equation}
+$$
+\begin{equation}
     f(x,t) = \frac{1}{\sqrt{2\pi Ct}}\exp\left( -\frac{x^{2}}{2Ct} \right)
-\end{equation}$$  
+\end{equation}
+$$  
 
 &emsp;&emsp;在之前机器学习系列的《交叉熵与KL散度》这篇博客文章中，我们证明了在给定均值与方差的条件下，高斯分布具有最大的熵，具体来说，**若有定义在整个实数轴上的随机变量$X$，给定其均值为$\mu$，方差为$\sigma^{2}$，则当$X \sim N(\mu, \sigma^{2})$时，随机变量$X$的熵$H(X)$最大，其熵为$H(X)=\frac{1}{2}\log(2\pi e \sigma^{2})$。而粒子的扩散过程是一个高斯过程，其在每个时间点$t$ 是都是一个高斯分布，具有最大的信息熵，同时随着时间$t$的增大，高斯分布的方差逐渐增大，其熵会进一步增大，当时间$t$趋于无穷时，高斯分布的熵也趋于无穷。整个粒子的扩散过程从开始熵为零的单点分布，到熵为无穷的高斯分布，系统的扩散总是趋向于熵最大的方式。**  
 
@@ -88,9 +110,11 @@ $$\begin{equation}
 
 &emsp;&emsp;举上面这个例子，我是想让读者对熵增的过程有一个直观的感受，最大熵原理便是基于熵增定律，选择熵最大的分布是一个理智的选择，因为这符合自然界的规律。言归正传，最大熵原理和最优传输的熵正则理论有什么联系了？实际上我们只要对(2)式做一个小的等价变形，就可以发现其中的联系了，(2)式实际上也等价于(6)：  
 
-$$\begin{equation}
+$$
+\begin{equation}
     L_{\boldsymbol{C}}^{\eta}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \max_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})}  H(\boldsymbol{P}) - \eta \left< \boldsymbol{P},\boldsymbol{C} \right>
-\end{equation}$$  
+\end{equation}
+$$  
 
 &emsp;&emsp;**我们原先对于熵正则的理解是在考虑熵的约束的条件下使得运输成本最小化，(6)式告诉我们，从最大熵原理的角度看，熵正则也可以理解成在考虑运输成本的情况下，使得联合分布$P(X,Y)$的熵最大。**  
 &emsp;&emsp;实际上，早在1969年，Alan Wilson 在将最优传输理论应用到交通运输领域时，便考虑到了最大熵原理。交通系统往往具有复杂性于动态性，其包含了多种变量的随机性。例如，交通流量会受到天气、时间、事故等因素的影响。最优运输问题的传统解决方案往往倾向于找出成本最低的几条路线，这在理论上是有效的，但这些路线可能无法准确地反映这些动态变化。Wilson在最优传输理论中引入熵正则项，这种正则化旨在使运输方案更加现实，通过平滑运输路线的分布，从而更好地模仿现实世界网络中观察到的实际交通流。  
@@ -101,27 +125,37 @@ $$\begin{equation}
 
 &emsp;&emsp;在(1)式中，运输矩阵$\boldsymbol{P}$的可行解集$U(\boldsymbol{\alpha},\boldsymbol{\beta})$ 可以看作随机变量$X,Y$的联合分布。对于联合分布$P(X,Y)$，有：  
 
-$$\boldsymbol{\hat{P}} = \argmax_{\boldsymbol{P} \in U(\boldsymbol{\alpha,\beta})} H(\boldsymbol{P}) = \boldsymbol{\alpha \beta^{T}}$$  
+$$
+\boldsymbol{\hat{P}} = \argmax_{\boldsymbol{P} \in U(\boldsymbol{\alpha,\beta})} H(\boldsymbol{P}) = \boldsymbol{\alpha \beta^{T}}
+$$  
 
 &emsp;&emsp;即当$P(X,Y)=\boldsymbol{\alpha \beta^{T}}$ 时，联合分布的熵最大。如果我们想要最优传输问题的解具有较大的熵，则我们可以将最优传输问题的可行解集约束到$\boldsymbol{\hat{P}}$附近，这样可行使得求解出的联合分布便可以具有具有较大的信息熵。要实现这种约束，可以对解集$U(\boldsymbol{\alpha,\beta})$中的$\boldsymbol{P}$与$\boldsymbol{\hat{P}}$的KL散度进行约束，这样可以使得解集中的$\boldsymbol{P}$与$\boldsymbol{\hat{P}}$的分布相似，即约束在$\boldsymbol{\hat{P}}$ 附近，这样我们得到的新的可行解集为：  
 
-$$\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | KL(\boldsymbol{P} || \boldsymbol{\alpha \beta^{T}}) \leq \gamma \}$$  
+$$
+\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | KL(\boldsymbol{P} || \boldsymbol{\alpha \beta^{T}}) \leq \gamma \}
+$$  
 
 &emsp;&emsp;其中，$\gamma$ 是一个常数，用来控制约束程度。由信息论的知识我们可以有以下结论：  
 
-$$\begin{split}
+$$
+\begin{split}
         & \frac{1}{2} \left( H(\boldsymbol{\alpha}) + H(\boldsymbol{\beta}) \right) \leq H(\boldsymbol{P}) \leq H(\boldsymbol{\alpha}) + H(\boldsymbol{\beta}) = H(\boldsymbol{\alpha \beta^{T}}) \\  
         & KL(\boldsymbol{P} || \boldsymbol{\alpha \beta^{T}}) = H(\boldsymbol{\alpha}) + H(\boldsymbol{\beta}) - H(\boldsymbol{P}) = I(X || Y)
-\end{split}$$  
+\end{split}
+$$  
 
 &emsp;&emsp;第一个式子确定了联合分布$P(X,Y)$的上下界，第二个式子说明$\boldsymbol{P}$ 与 $\boldsymbol{\alpha \beta^{T}}$ 的KL散度实际上是随机变量$X,Y$的**互信息量**。互信息量是一种衡量两个随机变量之间相互依赖程度的度量。给定两个随机变量X和Y，它们的互信息量 $I(X \parallel Y)$ 可以用联合概率分布来计算：  
 
-$$I(X \parallel Y) = \sum_{x}\sum_{y}P(x,y)\log{\frac{P(x,y)}{P(x)P(y)}} = H(X)-H(X | Y)$$  
+$$
+I(X \parallel Y) = \sum_{x}\sum_{y}P(x,y)\log{\frac{P(x,y)}{P(x)P(y)}} = H(X)-H(X | Y)
+$$  
 
 &emsp;&emsp;互信息量的含义为给定$Y$后，随机变量$X$所包含的信息的减少量。减少量越大，说明$X$和$Y$的依赖程度越大。也可以理解为联合概率分布$P(X,Y)$所提供的信息与独立分布$P(X),P(Y)$所提供的信息之间的信息差，信息差越大，说明$X$和$Y$的依赖关系越强。  
 &emsp;&emsp;因此对$\boldsymbol{P}$与$\boldsymbol{\alpha \beta^{T}}$ 之间的KL散度的约束，也可以理解成对随机变量$X,Y$之间的互信息量的约束，即依赖程度的约束。我们希望找到随机变量$X,Y$之间依赖程度足够小的联合分布:  
 
-$$\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | KL(\boldsymbol{P} || \boldsymbol{\alpha \beta^{T}}) \leq \gamma \} = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | h(\boldsymbol{P}) \ge h(\boldsymbol{\alpha}) + h(\boldsymbol{\beta}) - \gamma  \} \subset \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})$$  
+$$
+\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | KL(\boldsymbol{P} || \boldsymbol{\alpha \beta^{T}}) \leq \gamma \} = \{ \boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) | h(\boldsymbol{P}) \ge h(\boldsymbol{\alpha}) + h(\boldsymbol{\beta}) - \gamma  \} \subset \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})
+$$  
 
 &emsp;&emsp;此时引入熵正则的最优传输问题便转化为(3)式的形式，如果我们去写(3)式的拉格朗日函数，可以很容易将优化问题(3)转化为优化问题(2)，这里不再说明。  
 &emsp;&emsp;我们来讨论一下极限情况，设$\boldsymbol{P^{*}}$是原始最优传输问题(1)的最优解，$\boldsymbol{P^{\gamma}}$是引入熵正则约束的最优传输问题(3)的最优解，很容易可以得到以下结论：  
@@ -145,11 +179,15 @@ $$\boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymb
 
 &emsp;&emsp;在引入熵正则项后，我们可以定义一个新的距离：  
 
-$$d_{\boldsymbol{C,\gamma}}(\boldsymbol{\alpha,\beta}) :=  \min_{\boldsymbol{P} \in \boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right>$$  
+$$
+d_{\boldsymbol{C,\gamma}}(\boldsymbol{\alpha,\beta}) :=  \min_{\boldsymbol{P} \in \boldsymbol{U_{\gamma}}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right>
+$$  
 
 若成本矩阵$\boldsymbol{C}$为度量矩阵，即：  
 
-$$\boldsymbol{C} \in \{ \boldsymbol{C} \in \mathbb{R_{+}^{d \times d}}: \boldsymbol{C^{T}}=\boldsymbol{C};\forall i,j \leq d, c_{ij}=0 \Leftrightarrow i=j; \forall i,j,k \leq d, c_{ij} \leq c_{ik}+c_{kj} \}$$ 
+$$
+\boldsymbol{C} \in \{ \boldsymbol{C} \in \mathbb{R_{+}^{d \times d}}: \boldsymbol{C^{T}}=\boldsymbol{C};\forall i,j \leq d, c_{ij}=0 \Leftrightarrow i=j; \forall i,j,k \leq d, c_{ij} \leq c_{ik}+c_{kj} \}
+$$ 
 
 则 $d_{\boldsymbol{C,\gamma}}(\boldsymbol{\alpha,\beta})$ 被定义为分布 $\boldsymbol{\alpha,\beta}$ 之间的**Sinkhorn Distance**。  
 &emsp;&emsp;证明 Sinkhorn Distance 能够作为分布之间的距离类似于之前博客中 Wasserstein Distance 的证明过程，这里由于篇幅原因不再多加赘述。基于熵正则的最优传输问题所导出的 Sinkhorn Distance 具有广泛的应用，以下是几个典型领域：  
