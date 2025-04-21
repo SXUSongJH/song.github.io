@@ -64,7 +64,7 @@ Shu Zhao, <u>Xiaohan Zou</u>, Tan Yu, Huijuan Xu
 
 *Preprint*
 
-[arXiv](https://arxiv.org/abs/2504.13535) / [demo](https://anonymous22356.github.io/musflow.github.io)
+[arXiv:2504.13535](https://arxiv.org/abs/2504.13535) / [demo](https://anonymous22356.github.io/musflow.github.io)
 :::
 
 
