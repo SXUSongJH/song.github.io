@@ -6,7 +6,7 @@ avatarBack: /song.github.io/img/songAvatar.jpg
 tltr: Keep your feet on the ground, and your eyes on the stars.
 socials:
   - icon: i-academicons:cv
-    link: /song.github.io/files/cv/cv_cn.pdf
+    link: /song.github.io/files/cv/cv_zh.pdf
   - icon: "i-ion:mail-outline"
     link: "mailto:alphasong68@gmail.com, alfa_song6868@163.com"
   - icon: i-eva:github-outline
