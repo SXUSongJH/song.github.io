@@ -793,9 +793,9 @@ $$
 \bar{X}=\frac{1}{N}\sum_{i=1}^{N}X_i=\frac{1}{N}\sum_{i=1}^{N}L(y_i,f(x_i))=\hat{R}(f)
 $$  
 
-$$\
-begin{align*}
-    E(\bar{X}) &= E \left( \frac{1}{N} \sum_{i=1}^{N}X_i \right)= \frac{1}{N}\sum_{i=1}^{N}E(X_i) =E(X)\\
+$$
+\begin{align*}
+    E(\bar{X}) &= E \left( \frac{1}{N} \sum_{i=1}^{N}X_i \right)= \frac{1}{N} \sum_{i=1}^{N}E(X_i) =E(X) \\
     &= E \left( L(Y,f(X)) \right) = R(f) \\
 \end{align*}
 $$  
