@@ -19,7 +19,7 @@ export const TocButtons: Component<{ prev?: string; next?: string }> = (props) =
         <Show when={props.prev}>
           <a
             class="flex-center text-fg! hover:opacity-75"
-            href={`/song.github.io/posts/${props.prev}`}
+            href={`/posts/${props.prev}`}
             onMouseEnter={() => setTipId(1)}
             onMouseLeave={() => setTipId(0)}
           >
@@ -29,7 +29,7 @@ export const TocButtons: Component<{ prev?: string; next?: string }> = (props) =
 
         <Show when={props.next}>
           <a
-            href={`/song.github.io/posts/${props.next}`}
+            href={`/posts/${props.next}`}
             class="flex-center text-fg! hover:opacity-75"
             onMouseEnter={() => setTipId(2)}
             onMouseLeave={() => setTipId(0)}

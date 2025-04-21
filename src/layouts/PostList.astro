@@ -20,7 +20,7 @@ export interface Props {
 const { lang, tag } = Astro.props;
 
 const title = lang === "en" ? "Blog" : "博客";
-const allURL = `/song.github.io/posts/${lang === "en" ? "" : lang + "/"}`;
+const allURL = `/posts/${lang === "en" ? "" : lang + "/"}`;
 const tagURL = `${allURL}tags/`;
 
 const posts = await getPosts(lang);
@@ -63,7 +63,7 @@ const sortedPostsByYear = getSortedPostsByYear(tag ? getPostsByTag(posts, tag) :
               </div>
               <a
                 class="flex-1 !text-fg underline-offset-4"
-                href={`/song.github.io/posts/${item.id}`}
+                href={`/posts/${item.id}`}
                 transition:name={item.id}
               >
                 {item.data.title}
