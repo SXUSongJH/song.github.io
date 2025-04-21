@@ -5,7 +5,6 @@ tags:
     - Math
 ---
 
-# Simplex Method  
 
 ## toc
 

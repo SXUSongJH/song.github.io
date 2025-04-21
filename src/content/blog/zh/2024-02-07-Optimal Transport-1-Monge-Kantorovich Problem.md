@@ -5,7 +5,6 @@ tags:
   - Math
 ---
 
-# Monge-Kantorovich Problem
 
 ## toc
 

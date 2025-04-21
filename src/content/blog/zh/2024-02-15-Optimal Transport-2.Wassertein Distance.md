@@ -5,8 +5,6 @@ tags:
   - Math
 ---  
 
-# Wasserstein Distance  
-
 ## toc
 
 &emsp;&emsp;在上一节 Monge-Kantorovich Problem 中，我们介绍了最优传输问题。最优传输一个重要的应用是它可以用来衡量分布之间的距离，从而将距离的概念由点与点之间拓展到分布与分布之间。本节我们将介绍分布之间的距离定义，即 Wasserstein Distance，以及为什么其能够用于表示分布之间的距离。  

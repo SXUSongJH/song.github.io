@@ -5,7 +5,6 @@ tags:
     - Math
 ---
 
-# Kantorovich-OT Dual Problem 
 
 ## toc
 
