@@ -1,5 +1,13 @@
 ---
-import PostList from "@layouts/PostList.astro";
+import { SITE } from "@config";
 ---
 
-<PostList lang="en" />
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0;url=/song.github.io/posts/zh" />
+    <title>Redirecting to Chinese Blog - {SITE.title}</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/song.github.io/posts/zh">Chinese Blog</a>...</p>
+  </body>
+</html>
