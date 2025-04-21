@@ -13,7 +13,9 @@ tags:
 
 &emsp;&emsp;在上一节中，我们从概率视角描述了最优传输问题。设 $X,Y$ 是服从分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 的两个随机变量，运输矩阵为 $\boldsymbol{P}$，成本矩阵为 $\boldsymbol{C}$，则分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 之间的最优传输问题可以被定义为：  
 
-$$L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> = \min_{(X,Y)} \{ \mathbb{E}_{(X,Y)}(c(X,Y)): X \sim \boldsymbol{\alpha}, Y \sim \boldsymbol{\beta} \}$$  
+$$
+L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> = \min_{(X,Y)} \{ \mathbb{E}_{(X,Y)}(c(X,Y)): X \sim \boldsymbol{\alpha}, Y \sim \boldsymbol{\beta} \}
+$$  
 
 &emsp;&emsp;$L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta})$ 的含义是将分布 $\boldsymbol{\alpha}$ 传输到分布 $\boldsymbol{\beta}$ 所花费的最小成本，我们很自然地就会想到 $L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta})$ 也许能够表示分布 $\boldsymbol{\alpha}$ 和 $\boldsymbol{\beta}$ 之间的距离或相似度。当然，要说明这个问题，我们需要证明函数 $L_{\boldsymbol{C}}$ 满足概率空间中距离函数的性质。  
 &emsp;&emsp;设分布 $\boldsymbol{\alpha},\boldsymbol{\beta} $ 取自概率空间 $\mathcal{X}$，$W(\boldsymbol{\alpha},\boldsymbol{\beta})$ 是分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 之间的距离函数，如果函数 $W$ 满足:  
@@ -36,14 +38,18 @@ $$L_{\boldsymbol{C}}(\boldsymbol{\alpha},\boldsymbol{\beta}) := \min_{\boldsymbo
 **(4)** $\forall i,j,k \in \{ 1,\dotsb,n\}, \boldsymbol{D}_{i,k} \leq \boldsymbol{D}_{i,j}+\boldsymbol{D}_{j,k}$.  
 令成本矩阵 $\boldsymbol{C} = \boldsymbol{D}^{p}= \left[  \boldsymbol{D}_{i,j}^{p} \right]_{n \times n} \in \mathbb{R}^{n \times n}_{+}(p \ge 1)$，定义：  
 
-$$W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) := L_{\boldsymbol{D}^{p}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/p}$$  
+$$
+W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) := L_{\boldsymbol{D}^{p}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/p}
+$$  
 
 则称 $W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})$ 为概率分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 之间的 **p-Wasserstein 距离**。  
 &emsp;&emsp;现在来证明$W_{p}$可以作为概率空间$\sum_{n}$上的距离函数。  
 
 ### Proof  
 
-$$W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) = L_{\boldsymbol{D}^{p}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/p} = \left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{D}^{p} \right> \right)^{\frac{1}{p}}$$  
+$$
+W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) = L_{\boldsymbol{D}^{p}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/p} = \left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{D}^{p} \right> \right)^{\frac{1}{p}}
+$$  
 
 其中 $\boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta}) = \{ \boldsymbol{P} \in \mathbb{R}^{n \times n}_{+} : \boldsymbol{P}\mathbf{1}_{n}=\boldsymbol{\alpha} \quad and \quad \boldsymbol{P^{T}}\mathbf{1}_n=\boldsymbol{\beta} \}$.  
 &emsp;&emsp;要证明 $W_{p}$ 可以作为概率空间$\sum_{n}$上的距离函数，则需要证明 $W_{p}$ 满足概率空间中距离函数的性质，即非负性、同一性、对称性、三角不等式。  
@@ -53,63 +59,83 @@ $$W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) = L_{\boldsymbol{D}^{p}}(\boldsy
 &emsp;&emsp;由度量矩阵的性质可知:  $\boldsymbol{D}_{i,i}=0, \forall i \in \{ 1,\dotsb,n \}$，则有 $\boldsymbol{D}_{i,i}^{p}=0$，即成本矩阵 $\boldsymbol{D}^{p}$ 的对角线元素均为零。  
 &emsp;&emsp;当 $\boldsymbol{\alpha}=\boldsymbol{\beta}$ 时，可行域 $\boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\alpha}) = \{ \boldsymbol{P} \in \mathbb{R}^{n \times n}_{+} : \boldsymbol{P}\mathbf{1}_{n}=\boldsymbol{P^{T}}\mathbf{1}_n=\boldsymbol{\alpha} \}$，则 $\boldsymbol{P}^{*}=diag(\boldsymbol{\alpha}) \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\alpha})$，此时：  
 
-$$\left<  \boldsymbol{P}^{*}, \boldsymbol{D}^{p} \right>=\sum_{i}\boldsymbol{\alpha}_{i}\boldsymbol{D}_{i,i}^{p}=0 \Rightarrow W_{p}(\boldsymbol{\alpha},\boldsymbol{\alpha})=0$$  
+$$
+\left<  \boldsymbol{P}^{*}, \boldsymbol{D}^{p} \right>=\sum_{i}\boldsymbol{\alpha}_{i}\boldsymbol{D}_{i,i}^{p}=0 \Rightarrow W_{p}(\boldsymbol{\alpha},\boldsymbol{\alpha})=0
+$$  
 
 &emsp;&emsp;当 $W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})=0$ 时，由于成本矩阵 $\boldsymbol{D}^{p}$ 的非对角线元素均大于零，故运输矩阵 $\boldsymbol{P}$ 的非对角线元素均为零，即运输矩阵 $\boldsymbol{P}$ 为对角矩阵，$\boldsymbol{P}=\boldsymbol{P}^{T}$. 此时有 $\boldsymbol{P}\mathbf{1}_{n}=\boldsymbol{P^{T}}\mathbf{1}_n$，即 $\boldsymbol{\alpha}=\boldsymbol{\beta}$.  
 &emsp;&emsp;**(3) 对称性证明**  
 &emsp;&emsp;设 $\boldsymbol{P}^{*}$ 为$W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})$所对应的最优运输矩阵，则有:  
 
-$$W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})=\left<  \boldsymbol{P}^{*},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}$$  
+$$
+W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})=\left<  \boldsymbol{P}^{*},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}
+$$  
 
 &emsp;&emsp;由于成本矩阵 $\boldsymbol{D}^{p}$ 是对称矩阵，故有：  
 
-$$W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})=\left<  \boldsymbol{P}^{*},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}=\left<  \boldsymbol{(P^{*})^{T}},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}$$  
+$$
+W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})=\left<  \boldsymbol{P}^{*},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}=\left<  \boldsymbol{(P^{*})^{T}},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}
+$$  
 
 &emsp;&emsp;$\boldsymbol{(P^{*})^{T}}\mathbf{1}_{n}=\boldsymbol{\beta}, \boldsymbol{P}^{*}\mathbf{1}_{n}=\boldsymbol{\alpha} \Rightarrow \boldsymbol{(P^{*})^{T}} \in \boldsymbol{U}(\boldsymbol{\beta},\boldsymbol{\alpha})$. 由于 $\boldsymbol{U}(\boldsymbol{\beta},\boldsymbol{\alpha})$ 与 $\boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})$ 中的运输矩阵是对应转置的关系，故有：  
 
-$$W_{p}(\boldsymbol{\beta},\boldsymbol{\alpha})=\left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\beta},\boldsymbol{\alpha})} \left< \boldsymbol{P},\boldsymbol{D}^{p} \right> \right)^{\frac{1}{p}}=\left<  \boldsymbol{(P^{*})^{T}},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}$$  
+$$
+W_{p}(\boldsymbol{\beta},\boldsymbol{\alpha})=\left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\beta},\boldsymbol{\alpha})} \left< \boldsymbol{P},\boldsymbol{D}^{p} \right> \right)^{\frac{1}{p}}=\left<  \boldsymbol{(P^{*})^{T}},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}
+$$  
 
 $$\Rightarrow W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) = W_{p}(\boldsymbol{\beta},\boldsymbol{\alpha})$$  
 &emsp;&emsp;**(4) 三角不等式性质证明**  
 &emsp;&emsp;设 $\boldsymbol{\gamma} \in \sum_{n}$, 现证明：$W_{p}(\boldsymbol{\alpha},\boldsymbol{\gamma}) \leq W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})+W_{p}(\boldsymbol{\beta},\boldsymbol{\gamma})$.  
 &emsp;&emsp;设 $\boldsymbol{P}$ 是 $W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})$ 所对应的最优运输矩阵，$\boldsymbol{Q}$ 是 $W_{p}(\boldsymbol{\beta},\boldsymbol{\gamma})$ 所对应的最优运输矩阵，则有  
 
-$$\begin{split}
+$$
+\begin{split}
     W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) &= \left<  \boldsymbol{P},\boldsymbol{D}^{p} \right>^{\frac{1}{p}} = \left(\sum_{ij}\boldsymbol{P}_{ij}\boldsymbol{D}^{p}_{ij}\right)^{\frac{1}{p}}  \\
     W_{p}(\boldsymbol{\beta},\boldsymbol{\gamma}) &= \left<  \boldsymbol{Q},\boldsymbol{D}^{p} \right>^{\frac{1}{p}} = \left(\sum_{ij}\boldsymbol{Q}_{ij}\boldsymbol{D}^{p}_{ij}\right)^{\frac{1}{p}}  \\
-\end{split}$$  
+\end{split}
+$$  
 
 &emsp;&emsp;定义：  
 
-$$\tilde{\boldsymbol{\beta}} = [\tilde{\boldsymbol{\beta}}_{j}],\quad \tilde{\boldsymbol{\beta}}_{j} = \left \{ \begin{array}{lr}
+$$
+\tilde{\boldsymbol{\beta}} = [\tilde{\boldsymbol{\beta}}_{j}],\quad \tilde{\boldsymbol{\beta}}_{j} = \left \{ \begin{array}{lr}
     \boldsymbol{\beta}_{j}, \quad\boldsymbol{\beta}_{j} > 0 \\
     1, \quad\boldsymbol{\beta}_{j} = 0
-\end{array} \right.$$  
+\end{array} \right.
+$$  
 
-$$\boldsymbol{S} := \boldsymbol{P}diag(1/\tilde{\boldsymbol{\beta}})\boldsymbol{Q} \in \mathbb{R}^{n \times n}_{+}$$  
+$$
+\boldsymbol{S} := \boldsymbol{P}diag(1/\tilde{\boldsymbol{\beta}})\boldsymbol{Q} \in \mathbb{R}^{n \times n}_{+}
+$$  
 
 &emsp;&emsp;则有：  
 
-$$\begin{split}
+$$
+\begin{split}
     \boldsymbol{S}\mathbf{1}_{n} &= \boldsymbol{P}diag(1/\tilde{\boldsymbol{\beta}})\boldsymbol{Q}\mathbf{1}_{n}=\boldsymbol{P}diag(1/\tilde{\boldsymbol{\beta}})\boldsymbol{\beta}  \\
     &= \boldsymbol{P}\boldsymbol{[\boldsymbol{\beta}_{j}/\tilde{\boldsymbol{\beta}}_{j}]_{n}} = \boldsymbol{P}\mathbf{1}_{Supp(\boldsymbol{\beta})} = \boldsymbol{P}\mathbf{1}_{n} \\
     &= \boldsymbol{\alpha}
-\end{split}$$  
+\end{split}
+$$  
 
 &emsp;&emsp;同理可得：$\boldsymbol{S}^{T}\mathbf{1}_{n}=\boldsymbol{\gamma}$，则可以得到:  $\boldsymbol{S} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\gamma})$.  
 
-$$\begin{split}
+$$
+\begin{split}
     W_{p}(\boldsymbol{\alpha}, \boldsymbol{\gamma}) &= \left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\gamma})} \left< \boldsymbol{P},\boldsymbol{D}^{p} \right> \right)^{\frac{1}{p}} \leq \left< \boldsymbol{S},\boldsymbol{D}^{p} \right>^{\frac{1}{p}}  \\
     &= \left(  \sum_{ik}\boldsymbol{D}_{ik}^{p}\boldsymbol{S}_{ik} \right)^{\frac{1}{p}} = \left(  \sum_{ik}\boldsymbol{D}_{ik}^{p}\sum_{j}\frac{\boldsymbol{P}_{ij}\boldsymbol{Q}_{jk}}{\tilde{\boldsymbol{\beta}}_{j}} \right)^{\frac{1}{p}} = \left(  \sum_{ijk}\boldsymbol{D}_{ik}^{p}\frac{\boldsymbol{P}_{ij}\boldsymbol{Q}_{jk}}{\tilde{\boldsymbol{\beta}}_{j}} \right)^{\frac{1}{p}}  \\
     & \leq \left(  \sum_{ijk}(\boldsymbol{D}_{ij}+\boldsymbol{D}_{jk})^{p}\frac{\boldsymbol{P}_{ij}\boldsymbol{Q}_{jk}}{\tilde{\boldsymbol{\beta}}_{j}} \right)^{\frac{1}{p}} \leq \left(  \sum_{ijk}\boldsymbol{D}_{ij}^{p}\frac{\boldsymbol{P}_{ij}\boldsymbol{Q}_{jk}}{\tilde{\boldsymbol{\beta}}_{j}} \right)^{\frac{1}{p}} + \left(  \sum_{ijk}\boldsymbol{D}_{jk}^{p}\frac{\boldsymbol{P}_{ij}\boldsymbol{Q}_{jk}}{\tilde{\boldsymbol{\beta}}_{j}} \right)^{\frac{1}{p}}  \\
     &= \left(  \sum_{ij}\boldsymbol{D}_{ij}^{p}\boldsymbol{P}_{ij}\sum_{k}\frac{\boldsymbol{Q}_{jk}}{\tilde{\boldsymbol{\beta}}_{j}} \right)^{\frac{1}{p}} + \left(  \sum_{jk}\boldsymbol{D}_{jk}^{p}\boldsymbol{Q}_{jk}\sum_{i}\frac{\boldsymbol{P}_{ij}}{\tilde{\boldsymbol{\beta}}_{j}} \right)^{\frac{1}{p}}  \\
     &= \left(  \sum_{ij}\boldsymbol{D}_{ij}^{p}\boldsymbol{P}_{ij} \right)^{\frac{1}{p}} + \left(  \sum_{jk}\boldsymbol{D}_{jk}^{p}\boldsymbol{Q}_{jk} \right)^{\frac{1}{p}}  \\
     &= W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta}) + W_{p}(\boldsymbol{\beta},\boldsymbol{\gamma})  \\
-\end{split}$$  
+\end{split}
+$$  
 
 &emsp;&emsp;故有：  
 
-$$W_{p}(\boldsymbol{\alpha},\boldsymbol{\gamma}) \leq W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})+W_{p}(\boldsymbol{\beta},\boldsymbol{\gamma})$$  
+$$
+W_{p}(\boldsymbol{\alpha},\boldsymbol{\gamma}) \leq W_{p}(\boldsymbol{\alpha},\boldsymbol{\beta})+W_{p}(\boldsymbol{\beta},\boldsymbol{\gamma})
+$$  
 
 &emsp;&emsp;综上所述，$W_{p}$可以作为概率空间$\sum_{n}$上的距离函数。  
 
@@ -119,7 +145,8 @@ $$W_{p}(\boldsymbol{\alpha},\boldsymbol{\gamma}) \leq W_{p}(\boldsymbol{\alpha},
 &emsp;&emsp;Ground Cost 使用原始分布与目标分布的取值之差的 $L_2$ 范数来定义度量矩阵 $\boldsymbol{D}$，容易验证矩阵 $\boldsymbol{D}$ 满足度量矩阵的性质，然后使用度量矩阵的平方生成成本矩阵 $\boldsymbol{C}$，即 $\boldsymbol{C}=\boldsymbol{D}^2$，故 Ground Cost 是欧式空间中的一种 2-Wasserstein 距离。  
 &emsp;&emsp;仍然考虑离散分布 $\boldsymbol{\alpha}, \boldsymbol{\beta}$，设:  
 
-$$\boldsymbol{\alpha} = \begin{bmatrix}
+$$
+\boldsymbol{\alpha} = \begin{bmatrix}
     \alpha_1 \\
     \alpha_2 \\
     \vdots \\
@@ -129,7 +156,8 @@ $$\boldsymbol{\alpha} = \begin{bmatrix}
     \beta_2 \\
     \vdots \\
     \beta_n \\
-\end{bmatrix}$$  
+\end{bmatrix}
+$$  
 
 则分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 的分布列可以写成：  
 
@@ -156,23 +184,29 @@ $$\boldsymbol{\alpha} = \begin{bmatrix}
 
 定义度量矩阵$\boldsymbol{D}$为离散分布$\boldsymbol{\alpha},\boldsymbol{\beta}$取值之差的$L_2$范数：  
 
-$$\boldsymbol{D} = [\boldsymbol{D}_{ij}]_{n \times n}=[ ||i-j||_{2} ]_{n \times n} = \begin{bmatrix}
+$$
+\boldsymbol{D} = [\boldsymbol{D}_{ij}]_{n \times n}=[ ||i-j||_{2} ]_{n \times n} = \begin{bmatrix}
     0 & \cdots & ||1-n||_{2}  \\
     \vdots & & \vdots \\
     ||n-1||_{2} & \cdots & 0 \\
-\end{bmatrix}$$  
+\end{bmatrix}
+$$  
 
 定义成本矩阵$\boldsymbol{C}$为度量矩阵$\boldsymbol{D}$的平方：  
 
-$$ \boldsymbol{C} = \boldsymbol{D}^{2} = [\boldsymbol{D}_{ij}^{2}]_{n \times n} = \begin{bmatrix}
+$$
+\boldsymbol{C} = \boldsymbol{D}^{2} = [\boldsymbol{D}_{ij}^{2}]_{n \times n} = \begin{bmatrix}
     0 & \cdots & ||1-n||_{2}^{2}  \\
     \vdots & & \vdots \\
     ||n-1||_{2}^{2} & \cdots & 0 \\
-\end{bmatrix}$$  
+\end{bmatrix}
+$$  
 
 概率分布 $\boldsymbol{\alpha}, \boldsymbol{\beta}$ 之间的 Wasserstein 距离可以被定义为：  
 
-$$W_{2}(\boldsymbol{\alpha},\boldsymbol{\beta}) = L_{\boldsymbol{C}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/2} = \left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> \right)^{\frac{1}{2}}$$  
+$$
+W_{2}(\boldsymbol{\alpha},\boldsymbol{\beta}) = L_{\boldsymbol{C}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/2} = \left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> \right)^{\frac{1}{2}}
+$$  
 
 ## Example  
 
@@ -186,7 +220,8 @@ import ot
 
 &emsp;&emsp;假设离散分布 $\boldsymbol{\alpha}, \boldsymbol{\beta} \in \sum_{5}:=\{ \boldsymbol{x} \in \mathbb{R}^{5}_{+}: \boldsymbol{x^{T}}\mathbf{1}_{5}=1 \}$：  
 
-$$\boldsymbol{\alpha} = \begin{bmatrix}
+$$
+\boldsymbol{\alpha} = \begin{bmatrix}
     0.1 \\
     0.3 \\
     0.2 \\  
@@ -198,7 +233,8 @@ $$\boldsymbol{\alpha} = \begin{bmatrix}
     0.2 \\
     0.3 \\
     0.1 \\
-\end{bmatrix}$$  
+\end{bmatrix}
+$$  
 
 &emsp;&emsp;画出离散分布 $\boldsymbol{\alpha}, \boldsymbol{\beta}$ 的概率分布直方图：  
 
@@ -252,17 +288,21 @@ C = ground_cost(5)
 
 &emsp;&emsp;得到的成本矩阵$\boldsymbol{C}$为：  
 
-$$\boldsymbol{C} = \begin{bmatrix}
+$$
+\boldsymbol{C} = \begin{bmatrix}
     0 & 1 & 4 & 9 & 16 \\
     1 & 0 & 1 & 4 & 9 \\
     4 & 1 & 0 & 1 & 4 \\
     9 & 4 & 1 & 0 & 1 \\
     16 & 9 & 4 & 1 & 0 \\
-\end{bmatrix}$$  
+\end{bmatrix}
+$$  
 
 则概率分布 $\boldsymbol{\alpha}, \boldsymbol{\beta}$ 之间的 Wasserstein 距离可以被定义为：
 
-$$W_{2}(\boldsymbol{\alpha},\boldsymbol{\beta}) = L_{\boldsymbol{C}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/2} = \left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> \right)^{\frac{1}{2}}$$  
+$$
+W_{2}(\boldsymbol{\alpha},\boldsymbol{\beta}) = L_{\boldsymbol{C}}(\boldsymbol{\alpha,\boldsymbol{\beta}})^{1/2} = \left( \min_{\boldsymbol{P} \in \boldsymbol{U}(\boldsymbol{\alpha},\boldsymbol{\beta})} \left< \boldsymbol{P},\boldsymbol{C} \right> \right)^{\frac{1}{2}}
+$$  
 
 &emsp;&emsp;我们可以使用POT库的API来求解离散分布 $\boldsymbol{\alpha},\boldsymbol{\beta}$ 之间的最优传输矩阵 $P^{*}$ 以及 Wasserstein 距离 $W_{2}(\boldsymbol{\alpha},\boldsymbol{\beta})$，其代码如下：  
 
@@ -278,13 +318,15 @@ print(round(np.sqrt(wasserstein_distence),4))
 
 求解结果如下：  
 
-$$\boldsymbol{P}^{*} = \begin{bmatrix}
+$$
+\boldsymbol{P}^{*} = \begin{bmatrix}
     0.1 & 0 & 0 & 0 & 0 \\
     0 & 0.3 & 0 & 0 & 0 \\
     0 & 0 & 0.2 & 0 & 0 \\
     0 & 0 & 0 & 0.1 & 0 \\
     0 & 0 & 0 & 0.2 & 0.1 \\
-\end{bmatrix},\quad W_{2}(\boldsymbol{\alpha},\boldsymbol{\beta})=0.4472$$  
+\end{bmatrix},\quad W_{2}(\boldsymbol{\alpha},\boldsymbol{\beta})=0.4472
+$$  
 
 ## Reference  
 
