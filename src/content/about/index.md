@@ -1,8 +1,8 @@
 ---
 name: Jiahao Song
 subname: 宋嘉豪
-avatarFront: /song.github.io/img/song.jpg
-avatarBack: /song.github.io/img/songAvatar.jpg
+avatarFront: /song.github.io/img/songAvatar.jpg
+avatarBack: /song.github.io/img/song.jpg
 tltr: Keep your feet on the ground, and your eyes on the stars.
 socials:
   - icon: i-academicons:cv
