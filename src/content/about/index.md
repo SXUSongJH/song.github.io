@@ -34,15 +34,20 @@ In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a
 
 <u>Jiahao Song</u>, Yuzhao Wang
 
-*Preprint*
+*ACMMM 2025*
 
 [arXiv:2504.13535](https://arxiv.org/abs/2504.13535) / [demo](https://anonymous22356.github.io/musflow.github.io)
 :::
 
 
+## News
+
+- Music generation algorithm intern, 05/2025 - present, Kugou Music, TME
+
+
 ## Talks
 
-
+- [Paper sharing: JAM Song Generator](/song.github.io/files/talks/JAM_Song_Generator.pdf), Kugou Music, TME, 08/2025
 
 - [Score-Based Generative Model](/song.github.io/files/talks/2024-09-SGM.pdf), Shanxi University, 09/2024
 
