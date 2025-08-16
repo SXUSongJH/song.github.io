@@ -42,7 +42,7 @@ In addition, I am currently working as an LLM Algorithm Engineer at SpeedyJob, a
 
 ## News
 
-- Music generation algorithm intern | Kugou Music, TME | 05/2025-present,
+- Music generation algorithm intern | Kugou Music, TME | 05/2025-present
 
 
 ## Talks
